@@ -1,1 +1,2 @@
-# FDBMS_Group-7_Bottom-Up_Railways
+# FDBMS- Group-7
+# Bottom-Up Approach: Railways Booking System
