@@ -12,3 +12,5 @@ Tool Used:<br>
 This repo contains two files:<br>
 1. Railway_Booking.sql : This file has complete mysql code of the file.<br>
 2. Group 7_FDBMS_Railways.xlsx: This file contains all the entity table , relationship tables and entity relationship digram.<br>
+My sql ERD
+![image](https://user-images.githubusercontent.com/93219234/157817343-c7122f56-a728-431a-ad58-be608cd4c3a0.png)
