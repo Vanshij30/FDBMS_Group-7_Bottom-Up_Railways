@@ -3,7 +3,7 @@ create database railways;
 use railways;
 
 /* Table 1 */
-create table if not exists customer_details ( AadharNo bigint(12) primary key,
+create table if not exists customer_details ( AadharNo char(12) primary key,
                                               Name varchar(50) not null,
                                               Gender ENUM('Male', 'Female', 'Prefer not to say') not null,
                                               DOB Date not null,
@@ -30,7 +30,7 @@ insert into customer_details values (653562694977, 'Atul', 1, '1996-03-04', 'atu
 
 
 /* Table 2 */
-create table if not exists booking_details (b_id varchar(4) primary key,
+create table if not exists booking_details (b_id char(4) primary key,
                                             DOJ Date not null,
                                             BoardingStation varchar(50) not null,
                                             Destination varchar(50) not null,
@@ -60,7 +60,7 @@ insert into booking_details values ('B101', '2022-03-30', 'New Delhi ', 'Saharan
 
 
 /* Table 3 */
-create table if not exists rel_customer_booking_details (b_id varchar(4) not null,
+create table if not exists rel_customer_booking_details (b_id char(4) not null,
                                             DOJ Date not null,
                                             BoardingStation varchar(50) not null,
                                             Destination varchar(50) not null,
@@ -68,8 +68,8 @@ create table if not exists rel_customer_booking_details (b_id varchar(4) not nul
                                             BerthPref ENUM('Side Lower', 'Side Upper', 'Middle', 'Cabin Lower', 'Cabin Upper') not null,
                                             Dest_add varchar(100) not null,
                                             Payment ENUM('UPI/Paytm', 'Net Banking', 'DebitCard/Credit Card') not null,
-                                            AadharNo bigint(12) not null,
-                                            PhnNo bigint(10) not null,
+                                            AadharNo char(12) not null,
+                                            PhnNo char(10) not null,
                                             primary key (b_id, AadharNo),
                                             foreign key (b_id) references booking_details(b_id),
                                             foreign key (AadharNo) references customer_details(AadharNo)
